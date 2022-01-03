@@ -1478,7 +1478,7 @@ document.getElementById('kls3').oninput = function () {
   }
 }
 document.getElementById('kls4').oninput = function () {
-  PointChange(-50, 0, this)
+  incompatible(-50, 0, this, ['g1zy', 'j4fl'])
   for (var i = 0; i < document.getElementsByClassName('cost').length; ++i) {
     if (value1 == 0) {
       values.push(document.getElementsByClassName('cost')[i].innerHTML.replace(/\D/g, ''))
@@ -1526,7 +1526,7 @@ document.getElementById('kls4').oninput = function () {
   }
 }
 document.getElementById('kls5').oninput = function () {
-  PointChange(-100, 0, this)
+  incompatible(-100, 0, this, ['42jg', 'w0ll', 'fy08', 'g1zy', 'j4fl'])
   for (var i = 0; i < document.getElementsByClassName('cost').length; ++i) {
     if (value1 == 0) {
       values.push(document.getElementsByClassName('cost')[i].innerHTML.replace(/\D/g, ''))
@@ -1628,12 +1628,6 @@ document.getElementById('icne').oninput = function () {
       document.getElementsByName('aapq')[0].classList.remove('disabled')
     }
   }
-}
-document.getElementById('kls5').oninput = function () {
-  incompatible(-100, 0, this, ['42jg', 'w0ll', 'fy08', 'g1zy', 'j4fl'])
-}
-document.getElementById('kls4').oninput = function () {
-  incompatible(-50, 0, this, ['g1zy', 'j4fl'])
 }
 document.getElementById('n8fi').oninput = function () {
   incompatible(0, 0, this, ['kb60'])
