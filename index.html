@@ -5182,7 +5182,7 @@
               </label>
             </div>
             <div class="col-10 col-lg-4 col-md-6 col-sm-6 buttoncon choicecon">
-              <input autocomplete="off" class="choice shard" type="checkbox" id="euib" name="Shardless" style="display: none;" oninput="visible(0, 50, this, ['wwb1', 'fy08', 'uh4g', '9mam', '4ech', '42jg', 'w0ll', 'aapm', '48m6', '2b7c', 'pr2q', 'whrm', '6s5p', 'l8bx', 'aaam', 'aabc'])">
+              <input autocomplete="off" class="choice shard" type="checkbox" id="euib" name="Shardless" style="display: none;" oninput="visible(0, 50, this, ['wwb1', 'fy08', 'uh4g', '9mam', '4ech', '42jg', 'w0ll', 'aapm', '48m6', '2b7c', 'pr2q', 'whrm', '6s5p', 'l8bx', 'aaam', 'aabc', 'aaim'])">
               <label for="euib" name="euib" class="button">
                 <img src="images/shardless.jpg" lazy="loaded" class="img">
                 <h3 class="title">Shardless</h3>
@@ -6212,28 +6212,33 @@
               </label>
             </div>
               <div class="col-12 col-lg col-md-6 col-sm-6 buttoncon choicecon">
-              <input autocomplete="off" class="choice perk" type="checkbox" id="cls2" name="Fair Kaiju Fights" style="display: none;" oninput="PointChange(-15, 0, this)">
+              <input autocomplete="off" class="choice perk" type="checkbox" id="cls2" name="Fair Kaiju Fights" style="display: none;" oninput="incompatible(-15, 0, this, ['j4fl'])">
               <label for="cls2" name="cls2" class="button">
                 <h3 class="title">Fair Kaiju Fights</h3>
                 <div class="pa-0 col cost">Cost: 15 SP</div>
+                <div class="pa-0 col cost">Incompatible: End of the Kaiju</div>
                 <p class="desc">The Endbringers not impossibly powerful anymore. Their power level is limited to what they have shown during their fights. They certainly have tricks in reserve but they will not have an eleventh hour power-up if you start to beat them.</p>
                 <p class="desc">Their cores is still protected by impossibly dense matter but destroying one will not crack the planet in half. The Endbringer will simply die</p>
               </label>
             </div>
               <div class="col-12 col-lg col-md-6 col-sm-6 buttoncon choicecon">
-                <input autocomplete="off" class="choice perk" type="checkbox" id="cls3" name="Not as Powerful" style="display: none;" oninput="PointChange(-45, 0, this)">
+                <input autocomplete="off" class="choice perk" type="checkbox" id="cls3" name="Not as Powerful" style="display: none;" oninput="incompatible(-45, 0, this, ['g1zy', 'cls9'])">
                 <label for="cls3" name="cls3" class="button">
                   <h3 class="title">Not as Powerful</h3>
                   <div class="pa-0 col cost">Cost: 45 SP</div>
+                  <div class="pa-0 col cost">Incompatible: Not as Powerful (Global)</div>
+                  <div class="pa-0 col cost">Incompatible: Overcharge Strike</div>
                   <p class="desc">Scion is not impossibly powerful anymore.</p>
                   <p class="desc">Even without the exact circumstances of the Golden Morning it's possible to kill Scion by being sufficiently powerful, he will still put up one hell of a fight and the death toll will be enormous but he isn't impossibly powerful.</p>
                 </label>
               </div>
               <div class="col-12 col-lg col-md-6 col-sm-6 buttoncon choicecon">
-                <input autocomplete="off" class="choice perk" type="checkbox" id="cls9" name="Not as Powerful (Global)" style="display: none;" oninput="PointChange(-90, 0, this)">
+                <input autocomplete="off" class="choice perk" type="checkbox" id="cls9" name="Not as Powerful (Global)" style="display: none;" oninput="incompatible(-90, 0, this, ['g1zy', 'cls3'])">
                 <label for="cls9" name="cls9" class="button">
                   <h3 class="title">Not as Powerful (Global)</h3>
                   <div class="pa-0 col cost">Cost: 90 SP</div>
+                  <div class="pa-0 col cost">Incompatible: Not as Powerful</div>
+                  <div class="pa-0 col cost">Incompatible: Overcharge Strike</div>
                   <p class="desc">All the Entities are not as impossibly powerful anymore.</p>
                   <p class="desc">They will still give most type 3 civilizations a run for their money but a concerted effort and exotic weapon technology can make an Entity cut their losses. Killing one will still require extremely precise tactics and very specific weapons (or the right powers).</p>
                 </label>
@@ -6249,13 +6254,14 @@
               </label>
             </div>
             <div class="col-12 col-lg col-md-6 col-sm-6 buttoncon choicecon">
-              <input autocomplete="off" class="choice perk" type="checkbox" id="j4fl" name="End of the Kaiju" style="display: none;" oninput="incompatible(-20, -10, this, ['9gbp', '4lb9', '0r6j', 'f0jk', 'b5vq'])">
+              <input autocomplete="off" class="choice perk" type="checkbox" id="j4fl" name="End of the Kaiju" style="display: none;" oninput="incompatible(-20, -10, this, ['9gbp', 'cls2', '4lb9', '0r6j', 'f0jk', 'b5vq'])">
               <label for="j4fl" name="j4fl" class="button">
                 <h3 class="title">End of the Kaiju</h3>
                 <div class="pa-0 col cost">Cost: 20 SP</div>
                 <div class="pa-0 col cost">Cost: 10 CP</div>
                 <div class="pa-0 col cost">Incompatible: Skitter Mode</div>
                 <div class="pa-0 col cost">Incompatible: Endbringer Target</div>
+                <div class="pa-0 col cost">Incompatible: Fair Kaiju Fights</div>
                 <div class="pa-0 col cost">Incompatible: The End-Becomer</div>
                 <div class="pa-0 col cost">Incompatible: (Master) Endbringer</div>
                 <div class="pa-0 col cost">Incompatible: (Changer) Endbringer</div>
@@ -6265,12 +6271,14 @@
             </div>
             <div class="w-100 break5 visible"></div>
             <div class="col-12 col-lg col-md-6 col-sm-6 buttoncon choicecon">
-              <input autocomplete="off" class="choice perk" type="checkbox" id="g1zy" name="Overcharge Strike" style="display: none;" oninput="incompatible(-30, -20, this, ['aaab'])">
+              <input autocomplete="off" class="choice perk" type="checkbox" id="g1zy" name="Overcharge Strike" style="display: none;" oninput="incompatible(-30, -20, this, ['aaab', 'cls5'])">
               <label for="g1zy" name="g1zy" class="button">
                 <h3 class="title">Overcharge Strike</h3>
                 <div class="pa-0 col cost">Cost: 30 SP</div>
                 <div class="pa-0 col cost">Cost: 20 CP</div>
                 <div class="pa-0 col cost">Incompatible: Skitter Mode</div>
+                <div class="pa-0 col cost">Incompatible: Desire for Survival</div>
+                <div class="pa-0 col cost">Incompatible: Chained Avatar</div>
                 <p class="desc">Scion's core Shards are destroyed upon your arrival in this universe at the cost of your Shard's capacity for powers. Scion's corpse will come to the attention of someone who can stop it from resurrecting (the network is stabilized and Titans will not happen).</p>
               </label>
             </div>
@@ -6682,14 +6690,22 @@
                 <p class="desc">You attract trouble. Even if you try to live a completely mundane life, a strong Parahuman will always find you and you'll never go without a challenging fight. This could be considered a Perk if you have a power that grows with use or that gets significantly more useful with increased skill, but it ensures you're never overpowered. If you're stronger than anyone in the setting, a Tinker might find themselves opening a portal between the universe you're in and one with stronger fighters.</p>
               </label>
             </div>
-            <!-- <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
-              <input autocomplete="off" class="choice drawback" type="checkbox" id="aagk" name="Gang Pressed" style="display: none;" oninput="PointChange(0, 15, this)">
+            <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
+              <input autocomplete="off" class="choice drawback" type="checkbox" id="wgnw" name="Agent Abaddon" style="display: none;" oninput="PointChange(0, 12, this)">
+              <label for="wgnw" name="wgnw" class="button">
+                <h3 class="title">Agent Abaddon</h3>
+                <div class="pa-0 col cost">Gain: 12 CP</div>
+                <p class="desc">The Third entity reached out to you and gave you a mission, which is to absorb all the Parahuman Shards connected to the Thinker or Warrior Entities' networks. Only way to absorb a Parahuman Shard is to kill them.</p>
+              </label>
+            </div>
+            <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
+              <input autocomplete="off" class="choice drawback" type="checkbox" id="aagk" name="Gang Pressed" style="display: none;" oninput="PointChange(0, 12, this)">
               <label for="aagk" name="aagk" class="button">
                 <h3 class="title">Gang Pressed</h3>
-                <div class="pa-0 col cost">Gain: 15 CP</div>
+                <div class="pa-0 col cost">Gain: 12 CP</div>
                 <p class="desc">Somehow you've been shanghaied into working for somebody you don't want to. Forced to join the Wards or Protectorate on probation, recruited at gunpoint into one of the gangs, or strong armed into working for a particular company. With effort you'll be able to get out of this, but in the meantime somebody is holding your leash. Somehow there are some nasty consequences if you just decide to violate this, ones that you don't really want to deal with.</p>
               </label>
-            </div> -->
+            </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon">
               <label id="GTconvert" class="button" style="pointer-events: none;">
                 <img src="images/gangtarget.jpg" lazy="loaded" class="img">
@@ -6803,7 +6819,7 @@
                 <p class="desc">If the Slaughterhouse 9 has formed, they're after you. Not to kill you or torture you, no, something worse. They have a position open and they want to recruit you. If the Slaughterhouse 9 has yet to form, they will, and they will survive long enough to try to recruit you. If you don't have powers yet, they will only come after you once you've triggered.</p>
               </label>
             </div>
-            <!-- <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
+            <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
               <input autocomplete="off" class="choice drawback" type="checkbox" id="aagi" name="S-Class Magnet" style="display: none;" oninput="PointChange(15, 15, this)">
               <label for="aagi" name="aagi" class="button">
                 <h3 class="title">S-Class Magnet</h3>
@@ -6811,7 +6827,7 @@
                 <div class="pa-0 col cost">Gain: 15 CP</div>
                 <p class="desc">You have a talent for picking fights with S-Class threats. S-Class threats will inevitably seek you out and attempt to kill you. This does not apply to the Endbringers.</p>
               </label>
-            </div> -->
+            </div>
             <!-- <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
               <input autocomplete="off" class="choice drawback" type="checkbox" id="aagg" name="He Knows" style="display: none;" oninput="PointChange(20, 20, this)">
               <label for="aagg" name="aagg" class="button">
@@ -6832,7 +6848,7 @@
                 <p class="desc">Zion is no longer suicidal, and never will be. No amount of reminders regarding Eden's death, or the pointlessness of the Cycle, or anything else will make him stop trying to survive with all his faculties. Hope those points were worth it, because you'll have to go all out to win.</p>
               </label>
             </div>
-            <div class="col-12 col-lg-6 col-md-6 col-sm-6 buttoncon choicecon">
+            <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
               <input autocomplete="off" class="choice drawback" type="checkbox" id="wrm4" name="Acclimatation" style="display: none;" oninput="visible(0, 0, this)">
               <label for="wrm4" name="wrm4" class="button">
                 <h3 class="title">Acclimatation</h3>
@@ -6841,7 +6857,7 @@
                 <p class="desc">Normally they will grow to 100% in six months and 200% in twelve months. The more you use your powers creatively the faster they will grow.</p>
               </label>
             </div>
-            <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
+            <!-- <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
               <input autocomplete="off" class="choice drawback" type="checkbox" id="aaaz" name="Messiah" style="display: none;" oninput="PointChange(8, 13, this)">
               <label for="aaaz" name="aaaz" class="button">
                 <h3 class="title">Messiah</h3>
@@ -6849,8 +6865,8 @@
                 <div class="pa-0 col cost">Gain: 13 CP</div>
                 <p class="desc">You will be seen as the second-coming of a Messiah, not only by the Abrahamic faiths, but many others. However, this will come with expectations. People will expect you to be near-perfect, powerful, and capable of saving them. They will also expect you to share, at the very least, the core beliefs of your religion, and may lose faith and become angry at you if you support another religion. Many Athiests and Agnostics will suspect you of being a powerful Master/Stranger.</p>
               </label>
-            </div>
-            <!-- <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
+            </div> -->
+            <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
               <input autocomplete="off" class="choice drawback" type="checkbox" id="aaba" name="Outstanding Warrant" style="display: none;" oninput="PointChange(0, 5, this)">
               <label for="aaba" name="aaba" class="button">
                 <h3 class="title">Outstanding Warrant</h3>
@@ -6858,7 +6874,7 @@
                 <div class="pa-0 col cost">Incompatible: Drop In</div>
                 <p class="desc">You are a criminal, or at least legally considered one. You, for whatever reason, are believed by all legal entities to have commited a crime large enough to make it necessary to attempt to arrest you under normal circumstances.</p>
               </label>
-            </div> -->
+            </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 buttoncon choicecon">
               <input autocomplete="off" class="choice drawback" type="checkbox" id="aaae" name="Nothing to Replace" style="display: none;" oninput="PointChange(0, 8, this)">
               <label for="aaae" name="aaae" class="button">
@@ -6979,7 +6995,7 @@
                 <div class="pa-0 col cost">Gain: 25 CP</div>
                 <p class="desc">The veneer of civility has been stripped away. Society collapses from a number of catostrophic events. Cauldron has either been destroyed or corrupted. Parahumans must vie for dominance over the remnants, seizing power across the world as power. Warlords will soon take hold of all major cities. Resistance is scattered and haphazard. Any hope for a better world is gone. You can decide when this collapse occurs, anywhere from the 1980's to the week you arrive.</p>
               </label>
-            </div>
+              </div>
               <!-- Worst Day Ever Section -->
               <div class="col-12 col-lg-6 col-md-6 col-sm-6 buttoncon choicecon">
                 <input class="choice wrstevr" type="checkbox" id="wrs9" name="Worst Day Ever" style="display: none;" onchange="visible(0, 0, this, ['ranks2'])">
