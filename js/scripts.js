@@ -259,6 +259,8 @@ window.onload = function () {
     }
   }
 
+
+  
   var companions = document.querySelectorAll(".companion");
   for (var i = 0; i < companions.length; i++) {
     companion = companions[i]
@@ -386,12 +388,15 @@ function PointChange(SPChange, CPChange, elem) {
 function multiincompatible(SPChange, CPChange, elem, targets, otherincompatible) {
   PointChange(SPChange, CPChange, elem)
   for (var i = 0; i < targets.length; ++i) {
+    y = 0
     for (var x = 0; x < otherincompatible.length; ++x) {
       if (elem.checked == true || document.getElementById(otherincompatible[x]).checked == true) {
         if (document.getElementById(targets[i]).checked == true) { document.getElementById(targets[i]).click() }
         document.getElementById(targets[i]).disabled = true;
         document.getElementsByName(targets[i])[0].classList.add('disabled');
+        y = 1
       } else if (elem.checked != true && document.getElementById(otherincompatible[x]).checked != true) {
+        if (y == 1) return
         document.getElementById(targets[i]).disabled = false
         document.getElementsByName(targets[i])[0].classList.remove('disabled')
       }
@@ -905,11 +910,9 @@ document.getElementById('import').onclick = function () {
   document.getElementById('HScounter').innerHTML = 0
   document.getElementById('GTcounter').innerHTML = 0
   document.getElementById('NMcounter').innerHTML = 0
-  const selections = [];
   var elements = document.getElementsByClassName('choice')
   var ids = document.getElementById('check4').value;
-  var imp = ids.replace(/\,/g, "");
-  imp = imp.replace(/\s+/g, '');
+  var imp = ids.replace(/\s+/g, '');
   document.getElementById('check2').innerHTML = "";
   document.getElementById('check2').value = "";
   document.getElementById('check3').innerHTML = "";
@@ -921,8 +924,8 @@ document.getElementById('import').onclick = function () {
   }
   SP = 0
   CP = 0
-  for (var i = 0; i < (imp.length) / 4; ++i) {
-    selections.push(imp.substr(i * 4, 4));
+  const selections = imp.split(",");
+  for (var i = 0; i < (selections.length); ++i) {
     if (selections[i] != null) {
       if (document.getElementById('check2label').classList.contains('active') == false) {
         document.getElementById('check2label').classList.add('active')
@@ -1142,7 +1145,8 @@ document.getElementById('s7sb').oninput = function () {
   multiplerequired(0, 0, this, ['nx9r'], ['nhgo'])
 }
 document.getElementById('euib').oninput = function () {
-  incompatible(0, 50, this, ['wwb1', 'fy08', 'uh4g', '42jg', 'wrm4', 'w0ll', 'aapm', '48m6', '2b7c', 'pr2q', 'whrm', '6s5p', 'l8bx', 'aaam', 'aabi', 'aabc', 'aaaa', 'aafn', 'aagn', 'aabx', 'pjir'])
+  incompatible(0, 50, this, ['wwb1', 'uh4g', 'wrm4', 'aapm', '48m6', '2b7c', 'pr2q', 'whrm', '6s5p', 'l8bx', 'aaam', 'aaim', 'aabi', 'aabc', 'aaaa', 'aafn', 'aagn', 'aabx', 'pjir'])
+  multiincompatible(0, 0, this, ['42jg', 'w0ll', 'fy08'], ['kls5'])
   if (this.checked == true) {
     document.getElementById('T3convert').classList.add('disabled')
   } else {
@@ -1478,7 +1482,8 @@ document.getElementById('kls3').oninput = function () {
   }
 }
 document.getElementById('kls4').oninput = function () {
-  incompatible(-50, 0, this, ['g1zy', 'j4fl'])
+  multiincompatible(-50, 0, this, ['g1zy'], ['aaab', 'kls5', 'cls3', 'cls9', 'cls5'])
+  multiincompatible(0, 0, this, ['j4fl'], ['9gbp', '4lb9', '0r6j', 'f0jk', 'b5vq', 'kls5'])
   for (var i = 0; i < document.getElementsByClassName('cost').length; ++i) {
     if (value1 == 0) {
       values.push(document.getElementsByClassName('cost')[i].innerHTML.replace(/\D/g, ''))
@@ -1526,7 +1531,9 @@ document.getElementById('kls4').oninput = function () {
   }
 }
 document.getElementById('kls5').oninput = function () {
-  incompatible(-100, 0, this, ['42jg', 'w0ll', 'fy08', 'g1zy', 'j4fl'])
+  multiincompatible(-100, 0, this, ['g1zy'], ['aaab', 'kls4', 'cls3', 'cls9', 'cls5'])
+  multiincompatible(0, 0, this, ['42jg', 'w0ll', 'fy08'], ['euib'])
+  multiincompatible(0, 0, this, ['j4fl'], ['9gbp', '4lb9', '0r6j', 'f0jk', 'b5vq', 'kls4'])
   for (var i = 0; i < document.getElementsByClassName('cost').length; ++i) {
     if (value1 == 0) {
       values.push(document.getElementsByClassName('cost')[i].innerHTML.replace(/\D/g, ''))
@@ -1645,6 +1652,14 @@ document.getElementById('vll5').oninput = function () {
   incompatible(0, 0, this, ['kb60', '6zrd'])
   insertcopy(0, 0, this, '1x6x')
 }
+document.getElementById('cls3').oninput = function () {
+  incompatible(-45, 0, this, ['cls9'])
+  multiincompatible(0, 0, this, ['g1zy'], ['aaab', 'kls4', 'kls5', 'cls9', 'cls5'])
+}
+document.getElementById('cls9').oninput = function () {
+  incompatible(-90, 0, this, ['cls3'])
+  multiincompatible(0, 0, this, ['g1zy'], ['aaab', 'kls4', 'kls5', 'cls3', 'cls5'])
+}
 document.getElementById('yzm3').oninput = function () {
   incompatible(0, 0, this, ['6zrd'])
   insertcopy(0, 0, this, 'ljdq')
@@ -1716,6 +1731,14 @@ document.getElementById('iofn').oninput = function () {
 document.getElementById('aade').oninput = function () {
   incompatible(0, 0, this, ['6zrd'])
   insertcopy(0, 0, this, 'joh4')
+}
+document.getElementById('f0jk').oninput = function () {
+  visible(-25, 0, this, ['changerendbringersection'], ['changerendbringerid'], ['changerendbringerpower', 'changerendbringerappearance'])
+  multiincompatible(0, 0, this, ['j4fl'], ['9gbp', '4lb9', 'cls2', '0r6j', 'b5vq', 'kls4', 'kls5'])
+}
+document.getElementById('b5vq').oninput = function () {
+  visible(-20, 0, this, ['masterendbringersection'], ['masterendbringerid'], ['masterendbringerpower', 'masterendbringerappearance'])
+  multiincompatible(0, 0, this, ['j4fl'], ['9gbp', '4lb9', 'cls2', '0r6j', 'f0jk', 'kls4', 'kls5'])
 }
 function closeNav() {
   document.getElementById("sidenav").style.width = "0";
