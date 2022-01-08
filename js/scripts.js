@@ -1434,7 +1434,7 @@ document.getElementById('aagt').oninput = function () {
   }
 }
 document.getElementById('kls3').oninput = function () {
-  PointChange(-25, 0, this)
+  PointChange(-15, 0, this)
   for (var i = 0; i < document.getElementsByClassName('cost').length; ++i) {
     if (value1 == 0) {
       values.push(document.getElementsByClassName('cost')[i].innerHTML.replace(/\D/g, ''))
@@ -1484,6 +1484,7 @@ document.getElementById('kls3').oninput = function () {
 document.getElementById('kls4').oninput = function () {
   multiincompatible(-25, 0, this, ['g1zy'], ['aaab', 'kls5', 'cls3', 'cls9', 'cls5'])
   multiincompatible(0, 0, this, ['j4fl'], ['9gbp', '4lb9', '0r6j', 'f0jk', 'b5vq', 'kls5'])
+  incompatible(0, 0, this, ['wrm4'])
   for (var i = 0; i < document.getElementsByClassName('cost').length; ++i) {
     if (value1 == 0) {
       values.push(document.getElementsByClassName('cost')[i].innerHTML.replace(/\D/g, ''))
@@ -1534,6 +1535,7 @@ document.getElementById('kls5').oninput = function () {
   multiincompatible(-50, 0, this, ['g1zy'], ['aaab', 'kls4', 'cls3', 'cls9', 'cls5'])
   multiincompatible(0, 0, this, ['42jg', 'w0ll', 'fy08'], ['euib'])
   multiincompatible(0, 0, this, ['j4fl'], ['9gbp', '4lb9', '0r6j', 'f0jk', 'b5vq', 'kls4'])
+  incompatible(0, 0, this, ['wrm4'])
   for (var i = 0; i < document.getElementsByClassName('cost').length; ++i) {
     if (value1 == 0) {
       values.push(document.getElementsByClassName('cost')[i].innerHTML.replace(/\D/g, ''))
