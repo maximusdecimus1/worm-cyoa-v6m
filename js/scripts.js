@@ -1287,7 +1287,7 @@ document.getElementById('aagr').oninput = function () {
   }
 }
 document.getElementById('kls1').oninput = function () {
-  PointChange(25, 0, this)
+  incompatible(25, 0, this, ['wgnw'])
   for (var i = 0; i < document.getElementsByClassName('cost').length; ++i) {
     if (value1 == 0) {
       values.push(document.getElementsByClassName('cost')[i].innerHTML.replace(/\D/g, ''))
