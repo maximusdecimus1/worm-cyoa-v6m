@@ -77,7 +77,7 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 
 window.onload = function () {
   // this is a list of all the different categories of choice that can only have 1 selected, like alignment and age
-  var max1 = ['.aware', '.phranks', '.wrstevr', '.target', '.difficulty', '.scenario', '.alignment1', '.alignment2', '.incarnation', '.age', '.sex', '.gender', '.appearance', '.identity', '.job', '.education', '.homelife', '.shard', '.shardranking', '.powercopy', '.tier1', '.oops', '.settinglocation', '.location', '.locationnonearth', '.basesize', '.baseconcealment']
+  var max1 = ['.aware', '.phranks', '.wrstevr', '.target', '.wrsc', '.swph', '.difficulty', '.scenario', '.alignment1', '.alignment2', '.incarnation', '.age', '.sex', '.gender', '.appearance', '.identity', '.job', '.education', '.homelife', '.shard', '.shardranking', '.powercopy', '.tier1', '.oops', '.settinglocation', '.location', '.locationnonearth', '.basesize', '.baseconcealment']
 
   // this makes a list of all the choices, doesn't include menu buttons
   var choices = document.getElementsByClassName('choice');
